@@ -51,6 +51,7 @@ function App() {
   ];
   const onClick: MenuProps['onClick'] = (e) => {
     setCurrent(e.key)
+    console.log('shishi');
   }
   return (
     <>
