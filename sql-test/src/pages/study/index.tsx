@@ -1,7 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
+import { QuestionBoard } from "../../components/questionBoard";
 export const StudyCription = () => {
-  const [a, setA] = useState('4')
+  const [a, setA] = useState("4");
   return (
-  <div>学习</div>
-  )
-}
+    <>
+      <QuestionBoard />
+    </>
+  );
+};

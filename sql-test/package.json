@@ -20,20 +20,25 @@
     "pinia": "^2.0.19",
     "pinia-plugin-persistedstate": "^2.1.1",
     "react": "^18.2.0",
+    "react-css-modules": "^4.7.11",
     "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.0",
     "react-router": "^6.16.0",
     "react-router-dom": "^6.16.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "scss": "^0.2.4",
     "sql-formatter": "^9.2.0",
-    "sql.js": "^1.7.0"
+    "sql.js": "^1.7.0",
+    "stylus": "^0.60.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@types/sql.js": "^1.4.3",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/parser": "^6.7.4",
     "@vitejs/plugin-react-swc": "^3.3.2",
-    "eslint": "^8.45.0",
+    "eslint": "^8.51.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
@@ -43,6 +48,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "prettier": "^2.7.1",
+    "sass": "^1.69.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   }

@@ -3,37 +3,34 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Layout, Space, Menu } from "antd";
 import type { MenuProps } from 'antd';
 import { routes } from "../src/routes";
+import x from './index.module.scss'
 
 function App() {
   const { Header, Footer, Sider, Content } = Layout;
   const [current, setCurrent] = useState('study');
   const headerStyle: React.CSSProperties = {
+    display: 'flex',
     textAlign: "center",
-    color: "#fff",
     height: 64,
     paddingInline: 50,
     lineHeight: "64px",
-    backgroundColor: "#fff",
+    color: '#333',
+    backgroundColor: '#fff'
   };
   const contentStyle: React.CSSProperties = {
     textAlign: "center",
     minHeight: 120,
     lineHeight: "120px",
-    color: "#fff",
-    backgroundColor: "#108ee9",
   };
 
   const siderStyle: React.CSSProperties = {
-    textAlign: "center",
-    lineHeight: "120px",
-    color: "#fff",
-    backgroundColor: "#3ba0e9",
+    display: 'flex',
+    color: '#333',
+    backgroundColor: '#fff'
   };
 
   const footerStyle: React.CSSProperties = {
     textAlign: "center",
-    color: "#fff",
-    backgroundColor: "#7dbcea",
   };
   const items: MenuProps['items'] = [
     {
@@ -50,8 +47,7 @@ function App() {
     }
   ];
   const onClick: MenuProps['onClick'] = (e) => {
-    setCurrent(e.key)
-    console.log('shishi');
+    setCurrent(e.key);
   }
   return (
     <>
@@ -59,10 +55,11 @@ function App() {
       <Space direction="vertical" style={{ width: "100%" }} size={[0, 48]}>
         <Layout>
           <Header style={headerStyle}>
+            <div className={x["home-title"]}> <Link to="/study">SQL练习</Link></div>
             <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />;
           </Header>
           <Layout hasSider>
-            <Sider style={siderStyle}>
+            <Sider style={siderStyle} width='800'>
                 <Routes>
                   {routes.map((item) => {
                     return (
@@ -75,9 +72,9 @@ function App() {
                   })}
                 </Routes>
             </Sider>
-            <Content style={contentStyle}>Content</Content>
+            {/* <Content style={contentStyle}>Content</Content> */}
           </Layout>
-          <Footer style={footerStyle}>Footer</Footer>
+          <Footer style={footerStyle}>玩耍嗷玩耍嗷</Footer>
         </Layout>
       </Space>
       </BrowserRouter>
